@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		D892DF30266F532C004B1B07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D892DF2F266F532C004B1B07 /* Assets.xcassets */; };
 		D892DF33266F532C004B1B07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D892DF32266F532C004B1B07 /* Preview Assets.xcassets */; };
 		D892DF36266F532C004B1B07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D892DF34266F532C004B1B07 /* LaunchScreen.storyboard */; };
+		D892DF40266F5371004B1B07 /* PubNub in Frameworks */ = {isa = PBXBuildFile; productRef = D892DF3F266F5371004B1B07 /* PubNub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D892DF40266F5371004B1B07 /* PubNub in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +93,9 @@
 			dependencies = (
 			);
 			name = chat;
+			packageProductDependencies = (
+				D892DF3F266F5371004B1B07 /* PubNub */,
+			);
 			productName = chat;
 			productReference = D892DF26266F532A004B1B07 /* chat.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +123,9 @@
 				Base,
 			);
 			mainGroup = D892DF1D266F532A004B1B07;
+			packageReferences = (
+				D892DF3E266F5371004B1B07 /* XCRemoteSwiftPackageReference "swift" */,
+			);
 			productRefGroup = D892DF27266F532A004B1B07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -216,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +279,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -345,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D892DF3E266F5371004B1B07 /* XCRemoteSwiftPackageReference "swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pubnub/swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D892DF3F266F5371004B1B07 /* PubNub */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D892DF3E266F5371004B1B07 /* XCRemoteSwiftPackageReference "swift" */;
+			productName = PubNub;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D892DF1E266F532A004B1B07 /* Project object */;
 }
